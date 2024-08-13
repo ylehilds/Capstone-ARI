@@ -1,0 +1,179 @@
+//------------------------------------------------------------------------------
+//
+// Player.idl
+// Defines interfaces for the MFPlayer sample.
+//
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+// PARTICULAR PURPOSE.
+//
+// Copyright (c) Microsoft Corporation. All rights reserved.
+//
+//------------------------------------------------------------------------------
+
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "mfidl.idl";
+
+interface ISamplePlayer;
+
+// CreateSamplePlayer function.
+// Creates an instance of the sample player object.
+cpp_quote( "STDAPI CreateSamplePlayer(HWND hwndEvent, ISamplePlayer **ppPlayer);" )
+
+
+typedef enum tagPlayerState
+{
+	Player_Closed = 0,      // Initial state. No media source.
+	Player_OpenPending,     // Media source is being opened (asynchronously)
+    Player_Ready,           // Media source is opened, playback has not started.
+	Player_Started,         // Session started.
+	Player_Paused,          // Session paused.
+    Player_Stopped,         // Session stopped.
+    Player_Buffering,       // Buffering network data.
+    Player_Shutdown         // Shutdown. No further operations are allowed.
+} PlayerState;
+
+
+typedef enum tagPlayerEvent
+{
+    Player_VolumeChanged = 0,
+    Player_Connect,                 // lParam: BOOL
+    Player_OpenURLCancelled
+} PlayerEvent;
+
+
+// Private window message to notify the application of playback events.
+cpp_quote( "static const UINT WM_APP_NOTIFY = WM_APP + 1;" )   // wparam = PlayerState
+
+// Private window message to notify the application when an error occurs.
+cpp_quote( "static const UINT WM_APP_ERROR = WM_APP + 2;" )    // wparam = HRESULT
+
+// Private window message to notify the application of events that do not change the player state.
+cpp_quote( "static const UINT WM_APP_EVENT = WM_APP + 3;" )   // wparam = PlayerEvent
+
+
+//------------------------------------------------------------------------------
+// ISamplePlayer: 
+// Main interface of the player object.
+//------------------------------------------------------------------------------
+
+[
+    object,
+    uuid(982B799F-123F-47cb-A48B-0CE36C010ECC),
+    local
+]
+interface ISamplePlayer : IUnknown
+{
+	HRESULT		OpenURL(const WCHAR *sURL);
+    HRESULT     CancelOpenURL();
+    HRESULT		Play();
+	HRESULT		Pause();
+	HRESULT		Shutdown();
+    HRESULT     GetFeature(REFIID iid, void **ppv);
+	HRESULT     GetState(PlayerState *pState);
+};
+
+
+//------------------------------------------------------------------------------
+// IPlayerFeature:
+// Enables the player object to communicate with the feature objects.
+//------------------------------------------------------------------------------
+
+[
+    object,
+    uuid(4855D850-7BAC-44fc-ADAD-8403B905A85F),
+    local
+]
+interface IPlayerFeature : IUnknown
+{
+    // Notifies the feature object when the full playback topology is ready.
+    HRESULT SetTopology([in] IMFMediaSession *pSession, [in] IMFTopology *pTopology);
+
+    // Notifies the feature object to clear any resources for the current topology.
+    HRESULT Clear();
+
+    // Notifies the feature object of a session event.
+    HRESULT SessionEvent(MediaEventType type, HRESULT hrStatus, [in] IMFMediaEvent *pEvent);
+
+    // Requests the feature object to render a stream.
+    HRESULT RenderStream([in] REFGUID majorType, [in] IMFTopology *pTopology, [in] IMFTopologyNode *pSourceNode);
+};
+
+
+//------------------------------------------------------------------------------
+// IPlayerAudio: 
+// Audio-related functions.
+//------------------------------------------------------------------------------
+
+[
+    object,
+    uuid(E9BE9295-8F03-4418-9591-AFDA3A3BBC9D)
+]
+interface IPlayerAudio : IUnknown
+{
+    HRESULT SetVolume(float fLevel);
+    HRESULT GetVolume([out, retval] float *pfLevel);
+    HRESULT SetMute(BOOL bMute);
+    HRESULT GetMute([out, retval] BOOL *pbMute);
+}
+
+
+//------------------------------------------------------------------------------
+// IPlayerVideo: 
+// Video-related functions.
+//------------------------------------------------------------------------------
+
+[
+    object,
+    uuid(4D8B53FD-C3E2-4829-B888-0F8DFBD99855)
+]
+interface IPlayerVideo : IUnknown
+{
+    HRESULT HasVideo([out, retval] BOOL *pfHasVideo);
+    HRESULT SetVideoWindow(HWND hwnd);
+    HRESULT SetZoom(float fZoom);
+	HRESULT SetBrightness(float fBrightness);
+	HRESULT SetContrast(float fContrast);
+	HRESULT MoveLeft();
+	HRESULT MoveRight();
+	HRESULT MoveUp();
+	HRESULT MoveDown();
+    HRESULT Repaint();
+    HRESULT SetPresenter(REFCLSID clsid);
+    HRESULT SetMixer(REFCLSID clsid);
+}
+
+
+//------------------------------------------------------------------------------
+// IPlayerSeeking: 
+// Seeking and rate changes.
+//------------------------------------------------------------------------------
+
+[
+    object,
+    uuid(1A003F0A-A1D7-42c8-BA23-DFA113D65DD6)
+]
+interface IPlayerSeeking : IUnknown
+{
+    // Position
+    HRESULT CanSeek([out, retval] BOOL *pbCanSeek);
+    HRESULT GetDuration([out] MFTIME *phnsDuration);
+    HRESULT GetCurrentPosition([out] MFTIME *phnsPosition);
+    HRESULT SetPosition(MFTIME hnsPosition);
+
+    // Scrubbing
+    HRESULT CanScrub([out, retval] BOOL *pbCanScrub);
+    HRESULT Scrub(BOOL bScrub);
+
+    // FF/Rew
+    HRESULT CanFastForward([out, retval] BOOL *pbCanFF);
+    HRESULT CanRewind([out, retval] BOOL *pbCanRewind);
+    HRESULT SetRate(float fRate);
+    HRESULT FastForward();
+    HRESULT Rewind();
+}
+
+

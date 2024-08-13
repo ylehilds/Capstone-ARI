@@ -1,0 +1,21 @@
+﻿Build started 4/3/2012 12:08:14 PM.
+     1>Project "C:\Users\CSRL\Dropbox\Capstone-ARI\Work in Progress\MFPlayer2\MFPlayer\MFPlayer.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\MFPlayer.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       Midl:
+         All outputs are up-to-date.
+       ClCompile:
+         All outputs are up-to-date.
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         MFPlayer.vcxproj -> C:\Users\CSRL\Dropbox\Capstone-ARI\Work in Progress\MFPlayer2\MFPlayer\Release\MFPlayer.exe
+       FinalizeBuildStatus:
+         Deleting file "Release\MFPlayer.unsuccessfulbuild".
+         Touching "Release\MFPlayer.lastbuildstate".
+     1>Done Building Project "C:\Users\CSRL\Dropbox\Capstone-ARI\Work in Progress\MFPlayer2\MFPlayer\MFPlayer.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.07

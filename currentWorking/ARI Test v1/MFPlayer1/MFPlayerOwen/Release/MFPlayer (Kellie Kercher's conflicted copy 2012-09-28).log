@@ -1,0 +1,53 @@
+﻿Build started 4/11/2012 2:15:21 PM.
+     1>Project "C:\Users\ARI\Dropbox\Capstone-ARI\currentWorking\ARI Test v1\MFPlayer1\MFPlayerOwen\MFPlayer.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\MFPlayer.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       Midl:
+         All outputs are up-to-date.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\common\ /I..\common\winui /Zi /nologo /W3 /WX- /O2 /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt MainDialog.cpp
+         MainDialog.cpp
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\cstdio(48): warning C4995: 'gets': name was marked as #pragma deprecated
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\cstdio(52): warning C4995: 'sprintf': name was marked as #pragma deprecated
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\cstdio(55): warning C4995: 'vsprintf': name was marked as #pragma deprecated
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\cstring(21): warning C4995: 'strcat': name was marked as #pragma deprecated
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\cstring(22): warning C4995: 'strcpy': name was marked as #pragma deprecated
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\cwchar(30): warning C4995: 'swprintf': name was marked as #pragma deprecated
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\cwchar(31): warning C4995: 'vswprintf': name was marked as #pragma deprecated
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\cwchar(33): warning C4995: 'wcscat': name was marked as #pragma deprecated
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\cwchar(35): warning C4995: 'wcscpy': name was marked as #pragma deprecated
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string(757): warning C4995: 'swprintf': name was marked as #pragma deprecated
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string(766): warning C4995: 'swprintf': name was marked as #pragma deprecated
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string(775): warning C4995: 'swprintf': name was marked as #pragma deprecated
+     1>MainDialog.cpp(237): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\time.inl(112) : see declaration of 'localtime'
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ARI\Dropbox\Capstone-ARI\currentWorking\ARI Test v1\MFPlayer1\MFPlayerOwen\Release\MFPlayer.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\MFPlayer.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\ARI\Dropbox\Capstone-ARI\currentWorking\ARI Test v1\MFPlayer1\MFPlayerOwen\Release\MFPlayer.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ARI\Dropbox\Capstone-ARI\currentWorking\ARI Test v1\MFPlayer1\MFPlayerOwen\Release\MFPlayer.lib" /MACHINE:X86 Release\MFPlayer.res
+         Release\Button.obj
+         Release\Dialog.obj
+         Release\Feature_Audio.obj
+         Release\Feature_Base.obj
+         Release\Feature_Seeking.obj
+         Release\Feature_Video.obj
+         Release\MainDialog.obj
+         Release\Player.obj
+         Release\Slider.obj
+         Release\ThemedButton.obj
+         Release\wincontrol.obj
+         Release\winmain.obj
+         Generating code
+     1>c:\users\ari\dropbox\capstone-ari\currentworking\ari test v1\mfplayer1\mfplayerowen\winmain.cpp(124): warning C4715: 'wWinMain' : not all control paths return a value
+         Finished generating code
+         MFPlayer.vcxproj -> C:\Users\ARI\Dropbox\Capstone-ARI\currentWorking\ARI Test v1\MFPlayer1\MFPlayerOwen\Release\MFPlayer.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\ARI\Dropbox\Capstone-ARI\currentWorking\ARI Test v1\MFPlayer1\MFPlayerOwen\Release\MFPlayer.exe;#1" /manifest Release\MFPlayer.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Release\MFPlayer.unsuccessfulbuild".
+         Touching "Release\MFPlayer.lastbuildstate".
+     1>Done Building Project "C:\Users\ARI\Dropbox\Capstone-ARI\currentWorking\ARI Test v1\MFPlayer1\MFPlayerOwen\MFPlayer.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.24

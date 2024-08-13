@@ -1,0 +1,192 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 1000, 500, 361, 130
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_LAYERED
+CAPTION "Augmented Reality"
+MENU IDR_MENU1
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_VIDEO_ZOOM,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,91,59,100,15
+    LTEXT           "Zoom",IDC_STATIC,49,62,18,8
+    CONTROL         "",IDC_SEEKBAR,"SLIDER_CLASS",NOT WS_VISIBLE,7,6,347,12
+    PUSHBUTTON      "Play/Pause",IDC_PLAY,48,21,34,28,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Rew",IDC_REWIND,90,27,32,14,NOT WS_VISIBLE
+    PUSHBUTTON      "FF",IDC_FASTFORWARD,129,27,32,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_VIDEO,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,27,12,600,450
+    DEFPUSHBUTTON   "Exit",IDOK,250,101,50,14
+    CONTROL         "",IDC_VIDEO_BRIGHTNESS,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,91,79,100,15
+    LTEXT           "Brightness",IDC_STATIC,49,82,34,8
+    LTEXT           "Contrast",IDC_STATIC,49,103,29,8
+    CONTROL         "",IDC_VIDEO_CONTRAST,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,91,99,100,15
+    PUSHBUTTON      "Up",IDC_UP,259,23,32,32
+    PUSHBUTTON      "Down",IDC_DOWN,259,58,32,32
+    PUSHBUTTON      "Right",IDC_RIGHT,291,41,32,32
+    PUSHBUTTON      "Left",IDC_LEFT,227,41,32,32
+END
+
+IDD_OPENURL DIALOGEX 0, 0, 186, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open URL"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_URL,7,18,172,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,76,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,73,50,14
+    LTEXT           "Enter the URL to open:",IDC_STATIC,7,7,75,8
+END
+
+IDD_OPENFILE_EXT DIALOGEX 0, 0, 356, 40
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Custom EVR Presenter",IDC_EVR_PRESENTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,141,10
+    EDITTEXT        IDC_CLSID_PRESENTER,7,19,167,14,ES_AUTOHSCROLL
+    CONTROL         "Custom EVR Mixer",IDC_EVR_MIXER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,182,7,74,10
+    EDITTEXT        IDC_CLSID_MIXER,182,19,167,14,ES_AUTOHSCROLL
+END
+
+IDC_VIDEO_TEST DIALOGEX 0, 0, 800, 600
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 354
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_OPENURL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_OPENFILE_EXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 349
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 33
+    END
+
+    IDC_VIDEO_TEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 793
+        TOPMARGIN, 7
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Open File",                   ID_FILE_OPENFILE
+        MENUITEM "Open URL",                    ID_FILE_OPENURL
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SLIDER              BITMAP                  "images\\slider.bmp"
+IDB_MUTE                BITMAP                  "images\\mute.bmp"
+IDB_PLAY                BITMAP                  "images\\play.bmp"
+IDB_ARROW_LEFT          BITMAP                  "images\\leftarrow.bmp"
+IDB_ARROW_RIGHT         BITMAP                  "images\\rightarrow.bmp"
+IDB_ARROW_TOP           BITMAP                  "images\\toparrow.bmp"
+IDB_ARROW_DOWN          BITMAP                  "images\\downarrow.bmp"
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

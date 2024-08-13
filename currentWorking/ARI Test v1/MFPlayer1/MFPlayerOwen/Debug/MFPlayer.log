@@ -1,0 +1,78 @@
+﻿Build started 4/26/2012 2:55:37 PM.
+     1>Project "C:\Users\Mike\Documents\My Dropbox\Capstone-ARI\currentWorking\ARI Test v1\MFPlayer1\MFPlayerOwen\MFPlayer.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\MFPlayer.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       Midl:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\midl.exe /W1 /nologo /char signed /env win32 /h "player_h.h" /notlb player.idl 
+         Processing .\player.idl
+         player.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\oaidl.idl
+         oaidl.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\objidl.idl
+         objidl.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\unknwn.idl
+         unknwn.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\wtypes.idl
+         wtypes.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\basetsd.h
+         basetsd.h
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\guiddef.h
+         guiddef.h
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\ocidl.idl
+         ocidl.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\oleidl.idl
+         oleidl.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\servprov.idl
+         servprov.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\urlmon.idl
+         urlmon.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\msxml.idl
+         msxml.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\mfidl.idl
+         mfidl.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\mfobjects.idl
+         mfobjects.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\propsys.idl
+         propsys.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\shtypes.idl
+         shtypes.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\StructuredQueryCondition.idl
+         StructuredQueryCondition.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\propidl.idl
+         propidl.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\mediaobj.idl
+         mediaobj.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\mftransform.idl
+         mftransform.idl
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\oaidl.acf
+         oaidl.acf
+         Processing C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\ocidl.acf
+         ocidl.acf
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\common\ /I..\common\winui /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Common\WinUI\Button.cpp ..\Common\WinUI\Dialog.cpp Feature_Audio.cpp Feature_Base.cpp Feature_Seeking.cpp Feature_Video.cpp MainDialog.cpp Player.cpp ..\Common\WinUI\Slider.cpp ThemedButton.cpp ..\Common\WinUI\wincontrol.cpp winmain.cpp
+         winmain.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\sdkddkver.h(259): fatal error C1189: #error :  NTDDI_VERSION setting conflicts with _WIN32_WINNT setting
+         wincontrol.cpp
+         ThemedButton.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\sdkddkver.h(259): fatal error C1189: #error :  NTDDI_VERSION setting conflicts with _WIN32_WINNT setting
+         Slider.cpp
+         Player.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\sdkddkver.h(259): fatal error C1189: #error :  NTDDI_VERSION setting conflicts with _WIN32_WINNT setting
+         MainDialog.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\sdkddkver.h(259): fatal error C1189: #error :  NTDDI_VERSION setting conflicts with _WIN32_WINNT setting
+         Feature_Video.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\sdkddkver.h(259): fatal error C1189: #error :  NTDDI_VERSION setting conflicts with _WIN32_WINNT setting
+         Feature_Seeking.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\sdkddkver.h(259): fatal error C1189: #error :  NTDDI_VERSION setting conflicts with _WIN32_WINNT setting
+         Feature_Base.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\sdkddkver.h(259): fatal error C1189: #error :  NTDDI_VERSION setting conflicts with _WIN32_WINNT setting
+         Feature_Audio.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\sdkddkver.h(259): fatal error C1189: #error :  NTDDI_VERSION setting conflicts with _WIN32_WINNT setting
+         Dialog.cpp
+         Button.cpp
+         Generating Code...
+     1>Done Building Project "C:\Users\Mike\Documents\My Dropbox\Capstone-ARI\currentWorking\ARI Test v1\MFPlayer1\MFPlayerOwen\MFPlayer.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.97
